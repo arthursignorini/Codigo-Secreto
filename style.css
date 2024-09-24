@@ -6,15 +6,17 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    padding: 0 10px; /* Adicionando um pouco de padding */
 }
 
 .container {
-    background-color:#ccc;
+    background-color: #ccc;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 500px;
+    width: 100%; /* Ajusta para 100% da largura */
+    max-width: 500px; /* Limita a largura máxima */
 }
 
 h1, h2 {
@@ -31,10 +33,10 @@ input {
     padding: 10px;
     font-size: 16px;
     margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
     border-radius: 10px;
-    width: 300px;
+    border: 1px solid #ccc;
+    width: 100%; /* Ajusta para 100% da largura */
+    max-width: 300px; /* Limita a largura máxima */
 }
 
 button {
@@ -45,6 +47,8 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    width: 100%; /* Ajusta para 100% da largura */
+    max-width: 300px; /* Limita a largura máxima */
 }
 
 button:hover {
@@ -64,4 +68,20 @@ button:hover {
 
 #historico li {
     margin-bottom: 5px;
+}
+
+/* Media Query para telas menores */
+@media (max-width: 375px) { /* Largura do iPhone 14 */
+    h1, h2 {
+        font-size: 20px; /* Reduz o tamanho do texto */
+    }
+
+    p {
+        font-size: 16px; /* Reduz o tamanho do parágrafo */
+    }
+
+    input, button {
+        font-size: 14px; /* Ajusta o tamanho da fonte */
+        padding: 8px; /* Ajusta o padding */
+    }
 }
